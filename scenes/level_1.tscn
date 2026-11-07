@@ -4779,7 +4779,7 @@ position = Vector2(1000, 560)
 tile_map_data = PackedByteArray("AAAAAAkAAAABAAoAAAABAAkAAAACAAoAAAACAAkAAAACAAoAAAADAAkAAAACAAoAAAAEAAkAAAACAAoAAAAFAAkAAAACAAoAAAAGAAkAAAAFAAoAAAAIAAkAAAABAAoAAAAJAAkAAAACAAoAAAAKAAkAAAACAAoAAAALAAkAAAACAAoAAAAMAAkAAAACAAoAAAANAAkAAAACAAoAAAAOAAkAAAACAAoAAAAPAAkAAAACAAoAAAAQAAkAAAAFAAoAAAA=")
 tile_set = SubResource("TileSet_xcuk0")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1336305021]
+[node name="backgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1336305021]
 stream = ExtResource("8_15mv3")
 volume_db = -3.026
 autoplay = true

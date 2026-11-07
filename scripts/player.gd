@@ -5,6 +5,8 @@ var spawn_point = Vector2(112, 528)
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 @onready var animated_sprite = $animation
+@onready var jump_SFX = $jump
+@onready var fell_SFX = $fell
 
 
 func _physics_process(delta: float) -> void:
@@ -27,6 +29,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		jump_SFX.play()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -36,9 +39,10 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
-		
-	if position.y > 1500:
+# respawn if player fell
+	if position.y > 1300:
 		respawn()
+		fell_SFX.play()
 
 	move_and_slide()
 	
