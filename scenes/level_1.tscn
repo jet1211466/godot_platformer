@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://x7lnelxdjeum" path="res://scenes/bush.tscn" id="5_4nkto"]
 [ext_resource type="PackedScene" uid="uid://cqendrudhsm45" path="res://scenes/rock.tscn" id="5_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://ctpr62dcfve64" path="res://scenes/cactus.tscn" id="7_15mv3"]
+[ext_resource type="AudioStream" uid="uid://dsvqs83tublon" path="res://music/Master of the Feast.mp3" id="8_15mv3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4nkto"]
 texture = ExtResource("4_5xbjy")
@@ -4777,3 +4778,8 @@ position = Vector2(1000, 560)
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=363959944]
 tile_map_data = PackedByteArray("AAAAAAkAAAABAAoAAAABAAkAAAACAAoAAAACAAkAAAACAAoAAAADAAkAAAACAAoAAAAEAAkAAAACAAoAAAAFAAkAAAACAAoAAAAGAAkAAAAFAAoAAAAIAAkAAAABAAoAAAAJAAkAAAACAAoAAAAKAAkAAAACAAoAAAALAAkAAAACAAoAAAAMAAkAAAACAAoAAAANAAkAAAACAAoAAAAOAAkAAAACAAoAAAAPAAkAAAACAAoAAAAQAAkAAAAFAAoAAAA=")
 tile_set = SubResource("TileSet_xcuk0")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1336305021]
+stream = ExtResource("8_15mv3")
+volume_db = -3.026
+autoplay = true
