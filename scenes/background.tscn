@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cldgn1kvlx2kj"]
+
+[ext_resource type="Texture2D" uid="uid://duqi6xgieidof" path="res://sprites/background_color_mushrooms.png" id="1_bkp1e"]
+
+[node name="background" type="Parallax2D" unique_id=975687206]
+scroll_scale = Vector2(0.1, 0.1)
+scroll_offset = Vector2(208, 256)
+metadata/_edit_group_ = true
+
+[node name="backgroundSprite" type="Sprite2D" parent="." unique_id=942458654]
+position = Vector2(339.99997, 172)
+scale = Vector2(2.328125, 1.671875)
+texture = ExtResource("1_bkp1e")

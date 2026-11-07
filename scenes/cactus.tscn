@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ctpr62dcfve64"]
+
+[ext_resource type="Texture2D" uid="uid://cvtyhkva41blh" path="res://sprites/cactus.png" id="1_fy5iu"]
+
+[node name="cactus" type="Sprite2D" unique_id=299636310]
+position = Vector2(-2.3841858e-07, -2.3841858e-07)
+scale = Vector2(0.74999994, 0.74999994)
+texture = ExtResource("1_fy5iu")

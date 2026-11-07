@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://x7lnelxdjeum"]
+
+[ext_resource type="Texture2D" uid="uid://bgd4vj7cxiju2" path="res://sprites/bush.png" id="1_lad4k"]
+
+[node name="bush" type="Sprite2D" unique_id=1105954770]
+position = Vector2(9.536743e-07, 9.536743e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_lad4k")

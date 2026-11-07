@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cqendrudhsm45"]
+
+[ext_resource type="Texture2D" uid="uid://cyswf21dub5f1" path="res://sprites/rock.png" id="1_1di36"]
+
+[node name="rock" type="Sprite2D" unique_id=465184208]
+position = Vector2(0, -4.7683716e-07)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_1di36")
