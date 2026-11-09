@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://duqi6xgieidof" path="res://sprites/background_color_mushrooms.png" id="1_bkp1e"]
 
 [node name="background" type="Parallax2D" unique_id=975687206]
-scroll_scale = Vector2(0.1, 0.1)
+scroll_scale = Vector2(0.2, 0.2)
 scroll_offset = Vector2(208, 256)
 metadata/_edit_group_ = true
 
