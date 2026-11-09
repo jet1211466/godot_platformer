@@ -2,12 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://duqi6xgieidof" path="res://sprites/background_color_mushrooms.png" id="1_bkp1e"]
 
-[node name="background" type="Parallax2D" unique_id=975687206]
-scroll_scale = Vector2(0.2, 0.2)
-scroll_offset = Vector2(208, 256)
-metadata/_edit_group_ = true
+[node name="background" type="Parallax2D" unique_id=1045431186]
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(1152, 0)
 
-[node name="backgroundSprite" type="Sprite2D" parent="." unique_id=942458654]
-position = Vector2(339.99997, 172)
-scale = Vector2(2.328125, 1.671875)
+[node name="bgSprite" type="Sprite2D" parent="." unique_id=37496261]
+scale = Vector2(2.25, 2.25)
 texture = ExtResource("1_bkp1e")
+centered = false

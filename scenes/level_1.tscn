@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bbvot6xuyplai"]
 
-[ext_resource type="PackedScene" uid="uid://cldgn1kvlx2kj" path="res://scenes/background.tscn" id="1_5xbjy"]
+[ext_resource type="PackedScene" uid="uid://cldgn1kvlx2kj" path="res://scenes/background.tscn" id="1_15mv3"]
 [ext_resource type="PackedScene" uid="uid://cdg82mh4ljjty" path="res://scenes/player.tscn" id="1_bswci"]
 [ext_resource type="PackedScene" uid="uid://wtjm6m8vimh8" path="res://scenes/spike.tscn" id="3_rus8k"]
 [ext_resource type="Texture2D" uid="uid://cnion5q1msbu8" path="res://sprites/spritesheet-tiles-default.png" id="4_5xbjy"]
@@ -4737,7 +4737,7 @@ sources/0 = SubResource("TileSetAtlasSource_4nkto")
 
 [node name="level1" type="Node2D" unique_id=30353094]
 
-[node name="background" parent="." unique_id=975687206 instance=ExtResource("1_5xbjy")]
+[node name="background" parent="." unique_id=1045431186 instance=ExtResource("1_15mv3")]
 
 [node name="rock" parent="." unique_id=465184208 instance=ExtResource("5_pa8r4")]
 position = Vector2(248, 560)
