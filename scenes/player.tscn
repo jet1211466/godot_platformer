@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bwmlokmym7hmj" path="res://sprites/character_yellow_walk_a.png" id="4_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://c8nwv5p7npcjs" path="res://sprites/character_yellow_walk_b.png" id="5_fjrip"]
 [ext_resource type="AudioStream" uid="uid://rnafkogyx6cy" path="res://music/sfx_jump.ogg" id="7_fjrip"]
+[ext_resource type="Script" uid="uid://cgwa6ybwol5sm" path="res://scripts/camera_2d.gd" id="7_ur7pv"]
 [ext_resource type="AudioStream" uid="uid://cgcupv7vd73kh" path="res://music/sfx_disappear.ogg" id="8_smehm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xcuk0"]
@@ -61,6 +62,7 @@ shape = SubResource("RectangleShape2D_xcuk0")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=461771013]
 position_smoothing_enabled = true
+script = ExtResource("7_ur7pv")
 
 [node name="jump" type="AudioStreamPlayer" parent="." unique_id=235803453]
 stream = ExtResource("7_fjrip")
