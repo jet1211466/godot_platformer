@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://cwxsdt1imn0ut"]
+
+[ext_resource type="Script" uid="uid://dt3t10vjde0we" path="res://scripts/player_health.gd" id="1_7xk2c"]
+[ext_resource type="Texture2D" uid="uid://dqjns8fmquwwv" path="res://sprites/hud_heart.png" id="1_iajie"]
+[ext_resource type="Texture2D" uid="uid://bga2flsdyqquh" path="res://sprites/hud_heart_half.png" id="2_7xk2c"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iajie"]
+load_path = "res://.godot/imported/hud_heart_empty.png-429f0be8fe10f3f16f6d78827d3275d3.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xcuk0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_iajie")
+}],
+"loop": 1,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_iajie")
+}],
+"loop": 0,
+"name": &"full",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7xk2c")
+}],
+"loop": 1,
+"name": &"half",
+"speed": 5.0
+}]
+
+[node name="playerHealth" type="CanvasLayer" unique_id=525775550]
+script = ExtResource("1_7xk2c")
+
+[node name="Heart1" type="AnimatedSprite2D" parent="." unique_id=798016545]
+position = Vector2(-40, 0)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_xcuk0")
+animation = &"full"
+
+[node name="Heart2" type="AnimatedSprite2D" parent="." unique_id=1218712906]
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_xcuk0")
+animation = &"full"
+
+[node name="Heart3" type="AnimatedSprite2D" parent="." unique_id=83026149]
+position = Vector2(40, 0)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_xcuk0")
+animation = &"full"

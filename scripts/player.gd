@@ -1,13 +1,15 @@
 extends CharacterBody2D
 class_name player
 var spawn_point = Vector2(112, 528)
+var health = 6
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 @onready var animated_sprite = $animation
 @onready var jump_SFX = $jump
-@onready var fell_SFX = $fell
-
+@onready var died_SFX = $died
+@onready var health_ui = $playerHealth 
+@onready var hurt_SFX = $hurt
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -42,10 +44,21 @@ func _physics_process(delta: float) -> void:
 # respawn if player fell
 	if position.y > 1300:
 		respawn()
-		fell_SFX.play()
+		died_SFX.play()
 
 	move_and_slide()
 	
 func respawn():
 	position = spawn_point
 	velocity = Vector2.ZERO
+	health = 6
+	health_ui.update_hearts(health)
+	died_SFX.play()
+	
+func take_damage():
+	if health > 1:
+		health -= 1
+		health_ui.update_hearts(health)
+		hurt_SFX.play()
+	else:
+		respawn()
