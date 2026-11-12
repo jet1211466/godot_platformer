@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://b0jf0vxd08uiw" path="res://scripts/spike.gd" id="1_7a7y0"]
 [ext_resource type="Texture2D" uid="uid://7nfk4wdyr35t" path="res://sprites/spikes.png" id="2_7a7y0"]
-[ext_resource type="AudioStream" uid="uid://cx3yq465uxjlp" path="res://music/sfx_hurt.ogg" id="3_d2mqm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xcuk0"]
 size = Vector2(32, 16)
@@ -19,9 +18,5 @@ texture = ExtResource("2_7a7y0")
 [node name="spikeCollision" type="CollisionShape2D" parent="." unique_id=1492357464]
 position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_xcuk0")
-
-[node name="hurt" type="AudioStreamPlayer" parent="." unique_id=392243180]
-stream = ExtResource("3_d2mqm")
-volume_db = -12.847
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://cqendrudhsm45" path="res://scenes/rock.tscn" id="5_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://ctpr62dcfve64" path="res://scenes/cactus.tscn" id="7_15mv3"]
 [ext_resource type="AudioStream" uid="uid://dsvqs83tublon" path="res://music/Master of the Feast.mp3" id="8_15mv3"]
+[ext_resource type="Texture2D" uid="uid://b8xjch5fw0dru" path="res://sprites/hud_player_helmet_yellow.png" id="9_e3sih"]
+[ext_resource type="PackedScene" uid="uid://cwxsdt1imn0ut" path="res://scenes/player_health.tscn" id="10_2y5yt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4nkto"]
 texture = ExtResource("4_5xbjy")
@@ -363,6 +365,7 @@ texture_region_size = Vector2i(64, 64)
 0:5/0 = 0
 1:5/0 = 0
 2:5/0 = 0
+3:5/next_alternative_id = 2
 3:5/0 = 0
 4:5/0 = 0
 5:5/0 = 0
@@ -4738,6 +4741,7 @@ sources/0 = SubResource("TileSetAtlasSource_4nkto")
 [node name="level1" type="Node2D" unique_id=30353094]
 
 [node name="background" parent="." unique_id=1045431186 instance=ExtResource("1_15mv3")]
+scroll_offset = Vector2(0, 8)
 
 [node name="rock" parent="." unique_id=465184208 instance=ExtResource("5_pa8r4")]
 position = Vector2(248, 560)
@@ -4753,6 +4757,10 @@ position = Vector2(936, 560)
 
 [node name="player" parent="." unique_id=1826142552 instance=ExtResource("1_bswci")]
 position = Vector2(112, 528)
+
+[node name="playerHealth" parent="player" unique_id=525775550 instance=ExtResource("10_2y5yt")]
+offset = Vector2(200, 70)
+transform = Transform2D(1, 0, 0, 1, 200, 70)
 
 [node name="cactus2" parent="." unique_id=763807147 instance=ExtResource("7_15mv3")]
 position = Vector2(736, 552)
@@ -4783,3 +4791,10 @@ tile_set = SubResource("TileSet_xcuk0")
 stream = ExtResource("8_15mv3")
 volume_db = -3.026
 autoplay = true
+
+[node name="hudPlayerIcon" type="CanvasLayer" parent="." unique_id=1785303924]
+
+[node name="hudSprite" type="Sprite2D" parent="hudPlayerIcon" unique_id=18831976]
+position = Vector2(80, 88)
+scale = Vector2(1.918, 2)
+texture = ExtResource("9_e3sih")
