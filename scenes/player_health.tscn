@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://bga2flsdyqquh" path="res://sprites/hud_heart_half.png" id="2_7xk2c"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iajie"]
-load_path = "res://.godot/imported/hud_heart_empty.png-429f0be8fe10f3f16f6d78827d3275d3.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xcuk0"]
 animations = [{
@@ -41,15 +40,15 @@ script = ExtResource("1_7xk2c")
 position = Vector2(-40, 0)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_xcuk0")
-animation = &"full"
+animation = &"empty"
 
 [node name="Heart2" type="AnimatedSprite2D" parent="." unique_id=1218712906]
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_xcuk0")
-animation = &"full"
+animation = &"empty"
 
 [node name="Heart3" type="AnimatedSprite2D" parent="." unique_id=83026149]
 position = Vector2(40, 0)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_xcuk0")
-animation = &"full"
+animation = &"empty"
