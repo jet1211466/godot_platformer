@@ -61,7 +61,7 @@ autoplay = "idle"
 [node name="playerCollision" type="CollisionShape2D" parent="." unique_id=1676795311]
 shape = SubResource("RectangleShape2D_xcuk0")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=461771013]
+[node name="shakeTrackingCamera" type="Camera2D" parent="." unique_id=461771013]
 position_smoothing_enabled = true
 script = ExtResource("7_ur7pv")
 
