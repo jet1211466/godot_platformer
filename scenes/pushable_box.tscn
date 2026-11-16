@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://qhywoplkq5ef" path="res://sprites/block_empty.png" id="1_ye30g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xcuk0"]
+size = Vector2(64, 64)
 
 [node name="pushableBox" type="RigidBody2D" unique_id=1150680922]
 

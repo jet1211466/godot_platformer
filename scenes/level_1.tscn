@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b8xjch5fw0dru" path="res://sprites/hud_player_helmet_yellow.png" id="9_e3sih"]
 [ext_resource type="PackedScene" uid="uid://cwxsdt1imn0ut" path="res://scenes/player_health.tscn" id="10_2y5yt"]
 [ext_resource type="PackedScene" uid="uid://dcd141e2gsr3l" path="res://scenes/box.tscn" id="11_2os1m"]
+[ext_resource type="PackedScene" uid="uid://dm5bnfdtsnmpp" path="res://scenes/gold_coin.tscn" id="12_go7sj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4nkto"]
 texture = ExtResource("4_5xbjy")
@@ -4809,3 +4810,6 @@ texture = ExtResource("9_e3sih")
 
 [node name="box" parent="." unique_id=322329014 instance=ExtResource("11_2os1m")]
 position = Vector2(1480, 552)
+
+[node name="goldCoin" parent="." unique_id=1070203370 instance=ExtResource("12_go7sj")]
+position = Vector2(1592, 408)
