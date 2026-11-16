@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dm5bnfdtsnmpp"]
+
+[ext_resource type="Script" uid="uid://7t753iwapgmk" path="res://scripts/gold_coin.gd" id="1_cwpwy"]
+[ext_resource type="Texture2D" uid="uid://b35xrd4jcp6dx" path="res://sprites/coin_gold.png" id="1_m8xws"]
+[ext_resource type="Texture2D" uid="uid://dv0jid0harr28" path="res://sprites/coin_gold_side.png" id="2_cwpwy"]
+[ext_resource type="AudioStream" uid="uid://bfpuad6aftwtl" path="res://music/sfx_coin.ogg" id="4_gdhlj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xcuk0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_m8xws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_cwpwy")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xcuk0"]
+radius = 16.0
+
+[node name="goldCoin" type="Area2D" unique_id=1070203370]
+script = ExtResource("1_cwpwy")
+
+[node name="goldCoinAnimation" type="AnimatedSprite2D" parent="." unique_id=568751262]
+position = Vector2(2.3841858e-06, 2.3841858e-06)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_xcuk0")
+autoplay = "default"
+
+[node name="goldCoinCollision" type="CollisionShape2D" parent="." unique_id=668553182]
+rotation = -0.016924141
+shape = SubResource("CircleShape2D_xcuk0")
+
+[node name="coinSFX" type="AudioStreamPlayer" parent="." unique_id=1592614023]
+stream = ExtResource("4_gdhlj")
+volume_db = -2.447
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

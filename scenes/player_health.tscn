@@ -3,14 +3,13 @@
 [ext_resource type="Script" uid="uid://dt3t10vjde0we" path="res://scripts/player_health.gd" id="1_7xk2c"]
 [ext_resource type="Texture2D" uid="uid://dqjns8fmquwwv" path="res://sprites/hud_heart.png" id="1_iajie"]
 [ext_resource type="Texture2D" uid="uid://bga2flsdyqquh" path="res://sprites/hud_heart_half.png" id="2_7xk2c"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iajie"]
+[ext_resource type="Texture2D" uid="uid://cu74j7gp8fald" path="res://sprites/hud_heart_empty.png" id="2_x7pog"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xcuk0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_iajie")
+"texture": ExtResource("2_x7pog")
 }],
 "loop": 1,
 "name": &"empty",

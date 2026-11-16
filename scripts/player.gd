@@ -55,7 +55,7 @@ func respawn():
 	health_ui.update_hearts(health)
 	died_SFX.play()
 	print("reached")
-	$Camera2D.start_shake(9.0)
+	$shakeTrackingCamera.start_shake(11.0)
 	
 func take_damage():
 	if health > 1:

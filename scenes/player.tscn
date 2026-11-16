@@ -45,7 +45,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xcuk0"]
-size = Vector2(48, 48)
+size = Vector2(32, 32)
 
 [node name="player" type="CharacterBody2D" unique_id=1826142552]
 script = ExtResource("1_g2els")
@@ -59,9 +59,10 @@ animation = &"run"
 autoplay = "idle"
 
 [node name="playerCollision" type="CollisionShape2D" parent="." unique_id=1676795311]
+position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_xcuk0")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=461771013]
+[node name="shakeTrackingCamera" type="Camera2D" parent="." unique_id=461771013]
 position_smoothing_enabled = true
 script = ExtResource("7_ur7pv")
 
