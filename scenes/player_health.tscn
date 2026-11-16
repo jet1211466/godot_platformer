@@ -40,15 +40,15 @@ script = ExtResource("1_7xk2c")
 position = Vector2(-40, 0)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_xcuk0")
-animation = &"empty"
+animation = &"full"
 
 [node name="Heart2" type="AnimatedSprite2D" parent="." unique_id=1218712906]
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_xcuk0")
-animation = &"empty"
+animation = &"full"
 
 [node name="Heart3" type="AnimatedSprite2D" parent="." unique_id=83026149]
 position = Vector2(40, 0)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_xcuk0")
-animation = &"empty"
+animation = &"full"
