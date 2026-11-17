@@ -8,6 +8,7 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 @onready var animated_sprite = $animation
 @onready var jump_SFX = $jump
+@onready var jumpDouble_SFX = $jumpDouble
 @onready var died_SFX = $died
 @onready var health_ui = $playerHealth 
 @onready var hurt_SFX = $hurt
@@ -20,7 +21,6 @@ func _physics_process(delta: float) -> void:
 # landing reset
 	if is_on_floor():
 		usedJumps = 0
-		
 		
 # animation
 	if not is_on_floor():
@@ -38,7 +38,10 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and usedJumps < 2:
 		usedJumps += 1
 		velocity.y = JUMP_VELOCITY
-		jump_SFX.play()
+		if usedJumps == 1:
+			jump_SFX.play()
+		elif usedJumps == 2:
+			jumpDouble_SFX.play()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
