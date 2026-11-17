@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name player
 var spawn_point = Vector2(112, 528)
 var health = 6
+var usedJumps = 0
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -16,6 +17,11 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		
+# landing reset
+	if is_on_floor():
+		usedJumps = 0
+		
+		
 # animation
 	if not is_on_floor():
 		animated_sprite.play("jump")
@@ -29,7 +35,8 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.flip_h = (velocity.x < 0)
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("ui_accept") and usedJumps < 2:
+		usedJumps += 1
 		velocity.y = JUMP_VELOCITY
 		jump_SFX.play()
 
