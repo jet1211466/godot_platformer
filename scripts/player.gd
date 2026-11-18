@@ -23,7 +23,9 @@ func _physics_process(delta: float) -> void:
 		usedJumps = 0
 		
 # animation
-	if not is_on_floor():
+	if not is_on_floor() and usedJumps == 2:
+		animated_sprite.play("jumpdouble")
+	elif not is_on_floor():
 		animated_sprite.play("jump")
 	elif velocity.x != 0:
 		animated_sprite.play("run")
