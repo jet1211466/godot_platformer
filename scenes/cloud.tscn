@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bn0lufmkkqacy"]
+
+[ext_resource type="Texture2D" uid="uid://dkdwp2lby6jrw" path="res://sprites/cloudBetterBetter.png" id="1_vlwrh"]
+[ext_resource type="Script" uid="uid://c7ov0jmw5nk08" path="res://scripts/cloud.gd" id="2_2kyfr"]
+
+[node name="cloud" type="Sprite2D" unique_id=652528448]
+texture_filter = 1
+scale = Vector2(1.5, 1)
+texture = ExtResource("1_vlwrh")
+script = ExtResource("2_2kyfr")

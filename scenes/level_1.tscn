@@ -4744,7 +4744,7 @@ sources/0 = SubResource("TileSetAtlasSource_4nkto")
 [node name="level1" type="Node2D" unique_id=30353094]
 
 [node name="background" parent="." unique_id=1045431186 instance=ExtResource("1_15mv3")]
-scroll_offset = Vector2(136, 48)
+scroll_offset = Vector2(-16, 0)
 
 [node name="rock" parent="." unique_id=465184208 instance=ExtResource("5_pa8r4")]
 position = Vector2(248, 560)
@@ -4813,3 +4813,6 @@ position = Vector2(1480, 552)
 
 [node name="goldCoin" parent="." unique_id=1070203370 instance=ExtResource("12_go7sj")]
 position = Vector2(1592, 408)
+
+[node name="box2" parent="." unique_id=107292232 instance=ExtResource("11_2os1m")]
+position = Vector2(1488, 504)
