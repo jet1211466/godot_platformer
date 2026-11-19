@@ -6,6 +6,7 @@ var usedJumps = 0
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+const CLOUD_JUMP = preload("res://scenes/cloud.tscn")
 @onready var animated_sprite = $animation
 @onready var jump_SFX = $jump
 @onready var jumpDouble_SFX = $jumpDouble
@@ -18,7 +19,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		
-
+	
 # landing reset
 	if is_on_floor():
 		usedJumps = 0
@@ -44,6 +45,7 @@ func _physics_process(delta: float) -> void:
 		if usedJumps == 1:
 			jump_SFX.play()
 		elif usedJumps == 2:
+			cloudCreate()
 			jumpDouble_SFX.play()
 
 	# Get the input direction and handle the movement/deceleration.
@@ -77,3 +79,8 @@ func take_damage():
 		hurt_SFX.play()
 	else:
 		respawn()
+		
+func cloudCreate():
+	var cloud = CLOUD_JUMP.instantiate()
+	get_parent().add_child(cloud)
+	cloud.global_position = global_position
