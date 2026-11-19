@@ -84,3 +84,4 @@ func cloudCreate():
 	var cloud = CLOUD_JUMP.instantiate()
 	get_parent().add_child(cloud)
 	cloud.global_position = global_position
+	cloud.start_effect()
