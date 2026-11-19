@@ -18,6 +18,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		
+
 # landing reset
 	if is_on_floor():
 		usedJumps = 0
