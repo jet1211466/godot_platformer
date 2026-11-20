@@ -3,6 +3,8 @@ class_name player
 var spawn_point = Vector2(112, 528)
 var health = 6
 var usedJumps = 0
+var nearLadder := false
+var climbSpeed = -100
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -19,16 +21,25 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-		
+	
+	
+# ladder
+	if Input.is_action_pressed("ui_up") and nearLadder == true:
+		velocity.y = climbSpeed
+	
 	
 # landing reset
 	if is_on_floor():
 		usedJumps = 0
 		
 # animation
-	if not is_on_floor() and usedJumps == 2:
+	if not is_on_floor() and nearLadder and velocity.y < 0:
+		animated_sprite.play("climb")
+	elif not is_on_floor() and velocity.y > 0:
+		animated_sprite.play("fall")
+	elif not is_on_floor() and usedJumps == 2:
 		animated_sprite.play("jumpdouble")
-	elif not is_on_floor():
+	elif not is_on_floor() and nearLadder == false:
 		animated_sprite.play("jump")
 	elif velocity.x != 0:
 		animated_sprite.play("run")

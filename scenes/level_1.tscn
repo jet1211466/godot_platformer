@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://mhhmhiv68pl4" path="res://scenes/apple.tscn" id="13_7gny6"]
 [ext_resource type="PackedScene" uid="uid://cvqviogqmt5v5" path="res://scenes/goldcoins_cl.tscn" id="14_2aecg"]
 [ext_resource type="PackedScene" uid="uid://debaeak5xlnvo" path="res://scenes/coin_amount.tscn" id="15_6dial"]
+[ext_resource type="PackedScene" uid="uid://chpj50spetav4" path="res://scenes/ladder.tscn" id="16_7nomh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4nkto"]
 texture = ExtResource("4_5xbjy")
@@ -4749,6 +4750,9 @@ sources/0 = SubResource("TileSetAtlasSource_4nkto")
 [node name="background" parent="." unique_id=1045431186 instance=ExtResource("1_15mv3")]
 scroll_offset = Vector2(-16, 0)
 
+[node name="ladder" parent="." unique_id=171657698 instance=ExtResource("16_7nomh")]
+position = Vector2(1392, 520)
+
 [node name="rock" parent="." unique_id=465184208 instance=ExtResource("5_pa8r4")]
 position = Vector2(248, 560)
 
@@ -4829,5 +4833,5 @@ scale = Vector2(0.7, 0.7)
 transform = Transform2D(0.7, 0, 0, 0.7, 160, 110)
 
 [node name="coinAmount" parent="." unique_id=1162876468 instance=ExtResource("15_6dial")]
-offset = Vector2(200, 110)
-transform = Transform2D(1, 0, 0, 1, 200, 110)
+offset = Vector2(210, 110)
+transform = Transform2D(1, 0, 0, 1, 210, 110)
