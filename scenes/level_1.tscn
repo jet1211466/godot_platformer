@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cwxsdt1imn0ut" path="res://scenes/player_health.tscn" id="10_2y5yt"]
 [ext_resource type="PackedScene" uid="uid://dcd141e2gsr3l" path="res://scenes/box.tscn" id="11_2os1m"]
 [ext_resource type="PackedScene" uid="uid://dm5bnfdtsnmpp" path="res://scenes/gold_coin.tscn" id="12_go7sj"]
+[ext_resource type="PackedScene" uid="uid://mhhmhiv68pl4" path="res://scenes/apple.tscn" id="13_7gny6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4nkto"]
 texture = ExtResource("4_5xbjy")
@@ -4816,3 +4817,6 @@ position = Vector2(1592, 408)
 
 [node name="box2" parent="." unique_id=107292232 instance=ExtResource("11_2os1m")]
 position = Vector2(1488, 504)
+
+[node name="apple" parent="." unique_id=2048353514 instance=ExtResource("13_7gny6")]
+position = Vector2(1216, 496)

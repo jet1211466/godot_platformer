@@ -13,6 +13,7 @@ const CLOUD_JUMP = preload("res://scenes/cloud.tscn")
 @onready var died_SFX = $died
 @onready var health_ui = $playerHealth 
 @onready var hurt_SFX = $hurt
+@onready var healSFX = $healSFX
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -85,3 +86,8 @@ func cloudCreate():
 	get_parent().add_child(cloud)
 	cloud.global_position = global_position
 	cloud.start_effect()
+	
+func heal():
+	health += 1
+	health_ui.update_hearts(health)
+	healSFX.play()
