@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dm5bnfdtsnmpp" path="res://scenes/gold_coin.tscn" id="12_go7sj"]
 [ext_resource type="PackedScene" uid="uid://mhhmhiv68pl4" path="res://scenes/apple.tscn" id="13_7gny6"]
 [ext_resource type="PackedScene" uid="uid://cvqviogqmt5v5" path="res://scenes/goldcoins_cl.tscn" id="14_2aecg"]
+[ext_resource type="PackedScene" uid="uid://debaeak5xlnvo" path="res://scenes/coin_amount.tscn" id="15_6dial"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4nkto"]
 texture = ExtResource("4_5xbjy")
@@ -4826,3 +4827,7 @@ position = Vector2(1216, 496)
 offset = Vector2(160, 110)
 scale = Vector2(0.7, 0.7)
 transform = Transform2D(0.7, 0, 0, 0.7, 160, 110)
+
+[node name="coinAmount" parent="." unique_id=1162876468 instance=ExtResource("15_6dial")]
+offset = Vector2(200, 110)
+transform = Transform2D(1, 0, 0, 1, 200, 110)

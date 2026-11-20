@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://debaeak5xlnvo"]
 
 [ext_resource type="Texture2D" uid="uid://c0pwwof1f1y6y" path="res://sprites/numbers/hud_character_0.png" id="1_ktt66"]
+[ext_resource type="Script" uid="uid://dgjswb0yirkll" path="res://scripts/coin_amount.gd" id="1_yu5ih"]
 [ext_resource type="Texture2D" uid="uid://jfn5cuy2oaox" path="res://sprites/numbers/hud_character_1.png" id="2_yu5ih"]
 [ext_resource type="Texture2D" uid="uid://ba7dqebtbvin2" path="res://sprites/numbers/hud_character_2.png" id="3_e8c5c"]
 [ext_resource type="Texture2D" uid="uid://3ter3ee0riux" path="res://sprites/numbers/hud_character_3.png" id="4_nxlry"]
@@ -95,13 +96,16 @@ animations = [{
 }]
 
 [node name="coinAmount" type="CanvasLayer" unique_id=1162876468]
+script = ExtResource("1_yu5ih")
 
 [node name="numbers1" type="AnimatedSprite2D" parent="." unique_id=614097741]
-position = Vector2(-16, 0)
+position = Vector2(-8, 0)
+scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_xcuk0")
 animation = &"0"
 
 [node name="numbers2" type="AnimatedSprite2D" parent="." unique_id=414757580]
-position = Vector2(16, 0)
+position = Vector2(8, 0)
+scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_xcuk0")
 animation = &"0"

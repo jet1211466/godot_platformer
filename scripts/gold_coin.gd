@@ -1,5 +1,6 @@
 extends Area2D
 @onready var coinSFX = $coinSFX
+@onready var coinAmount = $"../coinAmount"
 var alreadyCollected = false
 
 
@@ -12,9 +13,13 @@ func _on_body_entered(body: Node2D) -> void:
 		alreadyCollected = true
 		hide()
 		coinSFX.play()
+		coinAmount.coinsCollected += 1
+		coinAmount.update_coins()
 		await coinSFX.finished
 		collected()
 		
+		
+# floating effect
 func _ready() -> void:
 	var tween = create_tween().set_loops()
 	
