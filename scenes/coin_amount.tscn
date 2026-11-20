@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://debaeak5xlnvo"]
+
+[ext_resource type="Texture2D" uid="uid://c0pwwof1f1y6y" path="res://sprites/numbers/hud_character_0.png" id="1_ktt66"]
+[ext_resource type="Texture2D" uid="uid://jfn5cuy2oaox" path="res://sprites/numbers/hud_character_1.png" id="2_yu5ih"]
+[ext_resource type="Texture2D" uid="uid://ba7dqebtbvin2" path="res://sprites/numbers/hud_character_2.png" id="3_e8c5c"]
+[ext_resource type="Texture2D" uid="uid://3ter3ee0riux" path="res://sprites/numbers/hud_character_3.png" id="4_nxlry"]
+[ext_resource type="Texture2D" uid="uid://b7kimrhofltmn" path="res://sprites/numbers/hud_character_4.png" id="5_k4tvv"]
+[ext_resource type="Texture2D" uid="uid://cipglrw4u2okf" path="res://sprites/numbers/hud_character_5.png" id="6_72i27"]
+[ext_resource type="Texture2D" uid="uid://cmc1ucu5wennq" path="res://sprites/numbers/hud_character_6.png" id="7_yd387"]
+[ext_resource type="Texture2D" uid="uid://etdx0e81y8qo" path="res://sprites/numbers/hud_character_7.png" id="8_0xa0t"]
+[ext_resource type="Texture2D" uid="uid://bejju5kcj4axs" path="res://sprites/numbers/hud_character_8.png" id="9_jaisi"]
+[ext_resource type="Texture2D" uid="uid://c4csiq7452cwj" path="res://sprites/numbers/hud_character_9.png" id="10_mu1pw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xcuk0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ktt66")
+}],
+"loop": 0,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yu5ih")
+}],
+"loop": 0,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_e8c5c")
+}],
+"loop": 0,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_nxlry")
+}],
+"loop": 0,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_k4tvv")
+}],
+"loop": 0,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_72i27")
+}],
+"loop": 0,
+"name": &"5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_yd387")
+}],
+"loop": 0,
+"name": &"6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_0xa0t")
+}],
+"loop": 0,
+"name": &"7",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_jaisi")
+}],
+"loop": 0,
+"name": &"8",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_mu1pw")
+}],
+"loop": 0,
+"name": &"9",
+"speed": 5.0
+}]
+
+[node name="coinAmount" type="CanvasLayer" unique_id=1162876468]
+
+[node name="numbers1" type="AnimatedSprite2D" parent="." unique_id=614097741]
+position = Vector2(-16, 0)
+sprite_frames = SubResource("SpriteFrames_xcuk0")
+animation = &"0"
+
+[node name="numbers2" type="AnimatedSprite2D" parent="." unique_id=414757580]
+position = Vector2(16, 0)
+sprite_frames = SubResource("SpriteFrames_xcuk0")
+animation = &"0"

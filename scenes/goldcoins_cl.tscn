@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cvqviogqmt5v5"]
+
+[ext_resource type="Texture2D" uid="uid://b35xrd4jcp6dx" path="res://sprites/coin_gold.png" id="1_0w078"]
+
+[node name="goldcoinsCL" type="CanvasLayer" unique_id=1223916495]
+
+[node name="goldcoinSpriteCL" type="Sprite2D" parent="." unique_id=951184638]
+texture = ExtResource("1_0w078")

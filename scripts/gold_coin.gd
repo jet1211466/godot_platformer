@@ -14,3 +14,9 @@ func _on_body_entered(body: Node2D) -> void:
 		coinSFX.play()
 		await coinSFX.finished
 		collected()
+		
+func _ready() -> void:
+	var tween = create_tween().set_loops()
+	
+	tween.tween_property(self, "position:y", position.y + 3.0, 0.5)
+	tween.tween_property(self, "position:y", position.y - 3.0, 0.5)
