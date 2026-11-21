@@ -58,9 +58,6 @@ animations = [{
 "texture": ExtResource("5_3v2ag")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_fjrip")
-}, {
-"duration": 1.0,
 "texture": ExtResource("3_qlg0r")
 }],
 "loop": 2,
@@ -90,7 +87,7 @@ metadata/_edit_group_ = true
 position = Vector2(-4.7683716e-07, -4.7683716e-07)
 scale = Vector2(0.37499997, 0.37499997)
 sprite_frames = SubResource("SpriteFrames_xcuk0")
-animation = &"fall"
+animation = &"jumpdouble"
 autoplay = "idle"
 
 [node name="playerCollision" type="CollisionShape2D" parent="." unique_id=1676795311]

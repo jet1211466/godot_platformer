@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cvqviogqmt5v5" path="res://scenes/goldcoins_cl.tscn" id="14_2aecg"]
 [ext_resource type="PackedScene" uid="uid://debaeak5xlnvo" path="res://scenes/coin_amount.tscn" id="15_6dial"]
 [ext_resource type="PackedScene" uid="uid://chpj50spetav4" path="res://scenes/ladder.tscn" id="16_7nomh"]
+[ext_resource type="Texture2D" uid="uid://bs3u3bmb6t18g" path="res://sprites/HUD_BGthingy.png" id="17_1s4pk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4nkto"]
 texture = ExtResource("4_5xbjy")
@@ -4767,6 +4768,14 @@ position = Vector2(1312, 560)
 
 [node name="rock3" parent="." unique_id=1855377773 instance=ExtResource("5_pa8r4")]
 position = Vector2(936, 560)
+
+[node name="HUDBackground" type="CanvasLayer" parent="." unique_id=1556209295]
+
+[node name="hudbackgroundSprite" type="Sprite2D" parent="HUDBackground" unique_id=502261727]
+texture_filter = 1
+position = Vector2(150, 88)
+scale = Vector2(4.5624995, 5.5)
+texture = ExtResource("17_1s4pk")
 
 [node name="rock4" parent="." unique_id=1318176509 instance=ExtResource("5_pa8r4")]
 position = Vector2(1216, 560)
