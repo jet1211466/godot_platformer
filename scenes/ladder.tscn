@@ -6,25 +6,28 @@
 [ext_resource type="Texture2D" uid="uid://jx3olrunq5cp" path="res://sprites/ladder_bottom.png" id="3_56fxr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_46oic"]
-size = Vector2(64, 128)
+size = Vector2(32, 200)
 
 [node name="ladder" type="Area2D" unique_id=171657698]
 script = ExtResource("1_027jo")
 
 [node name="ladderTop" type="Sprite2D" parent="." unique_id=1825949626]
-position = Vector2(0, -72)
+position = Vector2(0, -120)
+scale = Vector2(1, 1.4999999)
 texture = ExtResource("1_ku54x")
 
 [node name="ladderMiddle" type="Sprite2D" parent="." unique_id=603150272]
-position = Vector2(0, -8)
+position = Vector2(0, -24.000002)
+scale = Vector2(1, 1.5)
 texture = ExtResource("2_027jo")
 
 [node name="ladderBottom" type="Sprite2D" parent="." unique_id=1730266830]
-position = Vector2(0, 56)
+position = Vector2(0, 76)
+scale = Vector2(1, 1.6250001)
 texture = ExtResource("3_56fxr")
 
 [node name="ladderCollision" type="CollisionShape2D" parent="." unique_id=1692226988]
-position = Vector2(0, -8)
+position = Vector2(0, -20)
 shape = SubResource("RectangleShape2D_46oic")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

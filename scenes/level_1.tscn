@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://debaeak5xlnvo" path="res://scenes/coin_amount.tscn" id="15_6dial"]
 [ext_resource type="PackedScene" uid="uid://chpj50spetav4" path="res://scenes/ladder.tscn" id="16_7nomh"]
 [ext_resource type="Texture2D" uid="uid://bs3u3bmb6t18g" path="res://sprites/HUD_BGthingy.png" id="17_1s4pk"]
+[ext_resource type="PackedScene" uid="uid://djylxbbp8uh7w" path="res://scenes/checkpoint_flag.tscn" id="18_x2xxo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4nkto"]
 texture = ExtResource("4_5xbjy")
@@ -4751,8 +4752,8 @@ sources/0 = SubResource("TileSetAtlasSource_4nkto")
 [node name="background" parent="." unique_id=1045431186 instance=ExtResource("1_15mv3")]
 scroll_offset = Vector2(-16, 0)
 
-[node name="ladder" parent="." unique_id=171657698 instance=ExtResource("16_7nomh")]
-position = Vector2(1392, 520)
+[node name="ladder" parent="." unique_id=418681524 instance=ExtResource("16_7nomh")]
+position = Vector2(1688, 496)
 
 [node name="rock" parent="." unique_id=465184208 instance=ExtResource("5_pa8r4")]
 position = Vector2(248, 560)
@@ -4779,6 +4780,14 @@ texture = ExtResource("17_1s4pk")
 
 [node name="rock4" parent="." unique_id=1318176509 instance=ExtResource("5_pa8r4")]
 position = Vector2(1216, 560)
+
+[node name="checkpointFlag" parent="." unique_id=248191851 instance=ExtResource("18_x2xxo")]
+position = Vector2(40, 552)
+checkpointPosition = Vector2(40, 552)
+
+[node name="checkpointFlag2" parent="." unique_id=641636070 instance=ExtResource("18_x2xxo")]
+position = Vector2(1800, 360)
+checkpointPosition = Vector2(1800, 360)
 
 [node name="player" parent="." unique_id=1826142552 instance=ExtResource("1_bswci")]
 position = Vector2(112, 528)
@@ -4809,7 +4818,7 @@ position = Vector2(808, 560)
 position = Vector2(1000, 560)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=363959944]
-tile_map_data = PackedByteArray("AAAAAAkAAAABAAoAAAABAAkAAAACAAoAAAACAAkAAAACAAoAAAADAAkAAAACAAoAAAAEAAkAAAACAAoAAAAFAAkAAAACAAoAAAAGAAkAAAAFAAoAAAAIAAkAAAABAAoAAAAJAAkAAAACAAoAAAAKAAkAAAACAAoAAAALAAkAAAACAAoAAAAMAAkAAAACAAoAAAANAAkAAAACAAoAAAAOAAkAAAACAAoAAAAPAAkAAAACAAoAAAAQAAkAAAAFAAoAAAASAAkAAAABAAoAAAATAAkAAAACAAoAAAAUAAkAAAACAAoAAAAVAAkAAAACAAoAAAAWAAkAAAACAAoAAAAXAAkAAAACAAoAAAAYAAkAAAACAAoAAAAZAAkAAAACAAoAAAAaAAkAAAAFAAoAAAA=")
+tile_map_data = PackedByteArray("AAAAAAkAAAABAAoAAAABAAkAAAACAAoAAAACAAkAAAACAAoAAAADAAkAAAACAAoAAAAEAAkAAAACAAoAAAAFAAkAAAACAAoAAAAGAAkAAAAFAAoAAAAIAAkAAAABAAoAAAAJAAkAAAACAAoAAAAKAAkAAAACAAoAAAALAAkAAAACAAoAAAAMAAkAAAACAAoAAAANAAkAAAACAAoAAAAOAAkAAAACAAoAAAAPAAkAAAACAAoAAAAQAAkAAAAFAAoAAAASAAkAAAABAAoAAAATAAkAAAACAAoAAAAUAAkAAAACAAoAAAAVAAkAAAACAAoAAAAWAAkAAAACAAoAAAAXAAkAAAACAAoAAAAYAAkAAAACAAoAAAAZAAkAAAACAAoAAAAaAAkAAAAFAAoAAAAbAAYAAAABAAoAAAAcAAYAAAACAAoAAAAdAAYAAAACAAoAAAAeAAYAAAACAAoAAAAfAAYAAAACAAoAAAAgAAYAAAACAAoAAAAhAAYAAAACAAoAAAAiAAYAAAAFAAoAAAA=")
 tile_set = SubResource("TileSet_xcuk0")
 
 [node name="backgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1336305021]
@@ -4834,7 +4843,7 @@ position = Vector2(1592, 408)
 position = Vector2(1488, 504)
 
 [node name="apple" parent="." unique_id=2048353514 instance=ExtResource("13_7gny6")]
-position = Vector2(1216, 496)
+position = Vector2(1264, 528)
 
 [node name="goldcoinsCL" parent="." unique_id=1223916495 instance=ExtResource("14_2aecg")]
 offset = Vector2(160, 110)
@@ -4844,3 +4853,6 @@ transform = Transform2D(0.7, 0, 0, 0.7, 160, 110)
 [node name="coinAmount" parent="." unique_id=1162876468 instance=ExtResource("15_6dial")]
 offset = Vector2(210, 110)
 transform = Transform2D(1, 0, 0, 1, 210, 110)
+
+[node name="box3" parent="." unique_id=36165661 instance=ExtResource("11_2os1m")]
+position = Vector2(1368, 552)

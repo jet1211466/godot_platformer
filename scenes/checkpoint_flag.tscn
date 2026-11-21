@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://djylxbbp8uh7w"]
+
+[ext_resource type="Script" uid="uid://ti8uebnnl54s" path="res://scripts/checkpoint_flag.gd" id="1_4eoee"]
+[ext_resource type="Texture2D" uid="uid://i0s32l7586k5" path="res://sprites/flag_green_a.png" id="1_sj8yo"]
+[ext_resource type="Texture2D" uid="uid://c3ncuwkiumn6p" path="res://sprites/flag_green_b.png" id="2_4eoee"]
+[ext_resource type="AudioStream" uid="uid://bdib0sa6v0b7n" path="res://music/873545__packsmithy__checkpoint-synth-platformer-sounds.wav" id="4_wtrfk"]
+[ext_resource type="Texture2D" uid="uid://buwvfd16ghkgq" path="res://sprites/halothingy.png" id="5_2vjuu"]
+[ext_resource type="Script" uid="uid://crwhrfdabc2br" path="res://scripts/whitehalothingy.gd" id="6_2vjuu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xcuk0"]
+animations = [{
+"frames": [{
+"duration": 1.5,
+"texture": ExtResource("1_sj8yo")
+}, {
+"duration": 1.5,
+"texture": ExtResource("2_4eoee")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xcuk0"]
+size = Vector2(36, 45)
+
+[node name="checkpointFlag" type="Area2D" unique_id=248191851]
+script = ExtResource("1_4eoee")
+
+[node name="flagAnimation" type="AnimatedSprite2D" parent="." unique_id=209672832]
+position = Vector2(0, 1.9999999)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_xcuk0")
+autoplay = "default"
+frame = 1
+frame_progress = 0.8186302
+
+[node name="checkpointFlagCollision" type="CollisionShape2D" parent="." unique_id=1260715918]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_xcuk0")
+
+[node name="newCheckpointSFX" type="AudioStreamPlayer" parent="." unique_id=1489356518]
+stream = ExtResource("4_wtrfk")
+volume_db = -5.506
+
+[node name="whitehalothingy" type="Sprite2D" parent="." unique_id=297950993]
+visible = false
+texture_filter = 1
+texture = ExtResource("5_2vjuu")
+script = ExtResource("6_2vjuu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

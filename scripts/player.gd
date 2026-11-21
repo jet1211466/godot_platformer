@@ -1,10 +1,10 @@
 extends CharacterBody2D
 class_name player
-var spawn_point = Vector2(112, 528)
 var health = 6
 var usedJumps = 0
 var nearLadder := false
 var climbSpeed = -100
+var respawnPosition = Vector2(112, 528)
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -76,12 +76,11 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 func respawn():
-	position = spawn_point
+	position = respawnPosition
 	velocity = Vector2.ZERO
 	health = 6
 	health_ui.update_hearts(health)
 	died_SFX.play()
-	print("reached")
 	$shakeTrackingCamera.start_shake(11.0)
 	
 func take_damage():
@@ -100,5 +99,5 @@ func cloudCreate():
 	
 func heal():
 	health += 1
-	health_ui.update_hearts(health)
+	health_ui.update_hearts(health, true)
 	healSFX.play()
